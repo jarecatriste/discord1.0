@@ -1,0 +1,34 @@
+if(cmd === `${prefix}Aprovar`){
+            let user = message.mentions.users.first();
+          if (user < 1) return message.channel.send("mencione alguém")
+            var embed = new Discord.RichEmbed()
+            .setAuthor('HRC Resultado', 'https://cdn.discordapp.com/emojis/450112878108999680.gif?v=1')
+            .setDescription(`**Autor do banimento:**  <@${message.author.id}>`,  "O jogador se encontra punido! Obrigado pelo report!")
+            .setThumbnail(user.displayAvatarURL)
+           
+            .addField("Pontuação: ","+1")
+            .setColor("#33FF00")
+            .setFooter('Equipe de moderação do EuMC', 'https://cdn.discordapp.com/emojis/450112878108999680.gif?v=1')
+            message.channel.send(embed)
+            return;
+            }
+      
+            if(cmd === `${prefix}Reprovar`){
+              let user = message.mentions.users.first();
+            if (user < 1) return message.channel.send("**Mencione Alguém!**")
+              var embed = new Discord.RichEmbed()
+              .setAuthor('HRC Resultado', 'https://cdn.discordapp.com/emojis/450112878108999680.gif?v=1')
+              .setDescription(`Autor do banimento:  <@${message.author.id}>`,  "O jogador se encontra sem trapaças!")
+              .setThumbnail(user.displayAvatarURL)
+             
+              .addField("Pontuação: ","-1")
+              .setColor("#CC0000")
+              .setFooter('Equipe de moderação do EuMC', 'https://cdn.discordapp.com/emojis/450112878108999680.gif?v=1')
+            
+              message.channel.send(embed)
+              return;
+
+              }
+
+          });
+    
